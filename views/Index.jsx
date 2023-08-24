@@ -1,15 +1,18 @@
-const React = require('react');
+import React from 'react';
 
-const myStyle = {
-    color: 'blue',
-    backgroundColor: 'pink',
-}
+const Index = ({ pokemonData }) => {
+  return (
+    <div>
+      <h1>Gotta Catch 'Em All</h1>
+      <ul>
+        {pokemon.map((pokemon, index) => (
+          <li key={index}>
+            <a href={`/pokemon/${index}`}>{pokemon.name}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-class Index extends React.Component {
-  render() {
-      return (
-              <h1>SEE ALL THE POKEMON</h1>
-      );
-  }
-}
-module.exports = Index;
+export default Index;

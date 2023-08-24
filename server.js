@@ -13,7 +13,7 @@ app.get('/', (req,res) => {
 
 //INDEX ROUTE
 app.get('/pokemon', (req, res) => {
-    res.render('Index');
+    res.render('Index', { pokemon: pokemon });
 })
 
 
