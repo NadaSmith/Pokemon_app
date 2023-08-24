@@ -10,6 +10,8 @@ const ReactDOMServer = require('react-dom/server');
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
+
+//HOME ROUTE
 app.get('/', (req,res) => {
     res.send('Welcome to the Pokemon App!');
 });
