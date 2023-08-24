@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Show = ({ pokemon }) => {
@@ -12,4 +11,4 @@ const Show = ({ pokemon }) => {
   );
 };
 
-export default Show;
+export default Show; 
