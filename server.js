@@ -16,6 +16,14 @@ app.get('/pokemon', (req, res) => {
     res.render('Index', { pokemon: pokemon });
 })
 
+// ROUTE
+app.get('/pokemon/:id', (req, res) => {
+    const id = req.params.id;
+    const pokemon = pokemonData[id];
+
+    // Render Show.jsx with individual Pokemon data
+    res.render('Show', { pokemon });
+});
 
 
 
