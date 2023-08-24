@@ -1,18 +1,30 @@
-import React from 'react';
+const React = require('react');
 
-const Index = ({ pokemonData }) => {
-  return (
-    <div>
-      <h1>Gotta Catch 'Em All</h1>
-      <ul>
-        {pokemon.map((pokemon, index) => (
-          <li key={index}>
-            <a href={`/pokemon/${index}`}>{pokemon.name}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+const myStyle = {
+  color: '#ffffff',
+  backgroundColor: '#000000',
 };
 
-export default Index;
+class Index extends React.Component {
+  render () {
+    const { pokemon } = this.props;
+    return(
+      <div style={myStyle}>
+        <h1>Gotta Catch 'Em All</h1>
+        <ul>
+          {pokemon.map((pokemon, index) => (
+            <li key={index}>
+              <a href={`/pokemon/${index}`}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</a>
+            </li>
+          ))}
+        </ul>
+    </div>
+    )
+  }
+}
+
+module.exports = Index;
+
+
+
+
